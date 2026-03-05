@@ -95,5 +95,5 @@ export const socialLinks = {
   github: 'https://github.com/webcodeshubham',
   linkedin: 'https://www.linkedin.com/in/shubhams-2021',
   email: 'theshubhamshri@gmail.com',
-  resume: 'https://drive.google.com/file/d/1X1uDDeR_S-om92sZNZtQAmRQjc5QHsnU/view?usp=drive_link',
+  resume: 'https://drive.google.com/file/d/1555uXJ90BXwVM-hO3-X5h1u-7-Mk-Y0M/view?usp=sharing',
 };
