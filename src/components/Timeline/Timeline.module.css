@@ -159,9 +159,24 @@
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .timeline {
+    padding: 70px 0;
+  }
+
+  .timelineInner {
+    padding: 0 25px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 600px) {
   .item {
     padding-left: 56px;
+    padding-bottom: 36px;
   }
 
   .line,
@@ -177,5 +192,60 @@
 
   .card {
     padding: 20px;
+  }
+
+  .role {
+    font-size: 1.05rem;
+  }
+
+  .company {
+    font-size: 0.85rem;
+  }
+
+  .point {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 50px 0;
+  }
+
+  .timelineInner {
+    padding: 0 25px;
+  }
+
+  .item {
+    padding-left: 48px;
+    padding-bottom: 28px;
+  }
+
+  .line,
+  .lineFill {
+    left: 16px;
+  }
+
+  .dot {
+    left: 7px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .year {
+    font-size: 0.78rem;
+  }
+
+  .point {
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 }

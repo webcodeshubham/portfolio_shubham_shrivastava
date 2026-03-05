@@ -120,3 +120,63 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 70px 0;
+  }
+
+  .skillsInner {
+    padding: 0 25px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .category {
+    padding: 24px;
+  }
+
+  .categories {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 50px 0;
+  }
+
+  .skillsInner {
+    padding: 0 25px;
+  }
+
+  .category {
+    padding: 20px 16px;
+  }
+
+  .categoryTitle {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+  }
+
+  .categoryIcon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .skillName {
+    font-size: 0.85rem;
+  }
+
+  .skillPercent {
+    font-size: 0.75rem;
+  }
+
+  .skillItems {
+    gap: 14px;
+  }
+}

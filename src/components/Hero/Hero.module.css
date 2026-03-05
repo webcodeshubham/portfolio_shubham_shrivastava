@@ -226,6 +226,28 @@
   background: var(--accent-primary);
 }
 
+.mobileScrollHint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.swipeIcon {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipeText {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 @media (max-width: 968px) {
   .heroInner {
     grid-template-columns: 1fr;
@@ -265,12 +287,30 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 90px 0 100px;
+    padding: 80px 0 90px;
+  }
+
+  .heroInner {
+    padding: 0 25px;
+    gap: 30px;
   }
 
   .imageWrapper {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .statement {
+    font-size: 0.95rem;
+  }
+
+  .roleBadge {
+    padding: 5px 12px;
+    font-size: 0.78rem;
   }
 
   .buttons {
@@ -283,5 +323,30 @@
   .btnOutline {
     width: 100%;
     justify-content: center;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding: 75px 0 80px;
+  }
+
+  .heroInner {
+    padding: 0 25px;
+  }
+
+  .imageWrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .statement {
+    font-size: 0.88rem;
   }
 }

@@ -50,6 +50,8 @@
   transition: var(--transition);
   color: var(--text-secondary);
   font-size: 0.95rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .infoLink:hover {
@@ -205,12 +207,89 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    padding: 70px 0 50px;
+  }
+
+  .contactInner {
+    padding: 0 25px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
   .content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .submitBtn {
     width: 100%;
+  }
+
+  .infoParagraph {
+    font-size: 0.98rem;
+  }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 50px 0 40px;
+  }
+
+  .contactInner {
+    padding: 0 25px;
+  }
+
+  .infoLink {
+    padding: 14px 16px;
+    gap: 12px;
+    font-size: 0.88rem;
+  }
+
+  .infoLinkIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .input,
+  .textarea {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+
+  .textarea {
+    min-height: 130px;
+  }
+
+  .submitBtn {
+    padding: 14px 28px;
+    font-size: 0.92rem;
+  }
+
+  .footer {
+    margin-top: 50px;
+    padding-top: 24px;
+  }
+
+  .footerText {
+    font-size: 0.78rem;
+  }
+
+  .footerSocials {
+    gap: 16px;
+  }
+
+  .footerSocial {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 }

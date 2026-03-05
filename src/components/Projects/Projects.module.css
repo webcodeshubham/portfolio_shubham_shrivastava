@@ -220,6 +220,22 @@
 }
 
 @media (max-width: 768px) {
+  .projects {
+    padding: 70px 0;
+  }
+
+  .projectsInner {
+    padding: 0 25px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    gap: 32px;
+  }
+
   .card {
     grid-template-columns: 1fr;
   }
@@ -227,7 +243,7 @@
   .cardVisual {
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 28px;
+    padding: 24px;
     flex-direction: row;
   }
 
@@ -238,16 +254,70 @@
   .features {
     grid-template-columns: 1fr;
   }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .projects {
+    padding: 50px 0;
+  }
+
+  .projectsInner {
+    padding: 0 25px;
+  }
+
   .cardBody {
-    padding: 24px;
+    padding: 20px 16px;
+  }
+
+  .cardVisual {
+    padding: 20px 16px;
+    gap: 14px;
+  }
+
+  .cardIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .cardNumber {
+    font-size: 1.6rem;
+  }
+
+  .cardTitle {
+    font-size: 1.1rem;
+  }
+
+  .cardDesc {
+    font-size: 0.85rem;
+  }
+
+  .feature {
+    font-size: 0.8rem;
+  }
+
+  .techBadge {
+    padding: 4px 10px;
+    font-size: 0.7rem;
   }
 
   .cardFooter {
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+  }
+
+  .cardLink {
+    font-size: 0.82rem;
+    padding: 5px 10px;
   }
 }
