@@ -11,8 +11,8 @@ export const projects = [
       'Modular state architecture with Context API',
     ],
     tech: ['React', 'JavaScript', 'Context API', 'CSS Modules'],
-    github: 'https://github.com/webcodeshubham',
-    live: '#',
+    github: 'https://github.com/webcodeshubham/config-driven-ui-builder',
+    live: 'https://config-driven-ui-builder.vercel.app/',
     image: null,
   },
   {
@@ -27,8 +27,8 @@ export const projects = [
       'Chart.js visualizations with live data binding',
     ],
     tech: ['React', 'Vite', 'REST APIs', 'Chart.js'],
-    github: 'https://github.com/webcodeshubham',
-    live: '#',
+    github: 'https://github.com/webcodeshubham/performance-data-dashboard',
+    live: 'https://performance-data-dashboard.vercel.app/',
     image: null,
   },
 ];
