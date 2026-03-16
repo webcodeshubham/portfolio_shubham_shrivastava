@@ -47,7 +47,7 @@ export default function Projects() {
                   className={styles.cardIcon}
                   whileHover={{ rotate: 8, scale: 1.1 }}
                 >
-                  {projectIcons[i]}
+                  {projectIcons[i % projectIcons.length]}
                 </motion.div>
                 <div className={styles.cardNumber}>0{i + 1}</div>
                 <div className={styles.cardTechPreview}>
@@ -75,9 +75,11 @@ export default function Projects() {
 
                 <div className={styles.cardFooter}>
                   <div className={styles.cardLinks}>
-                    <a href={project.github} target="_blank" rel="noreferrer" className={styles.cardLink}>
-                      <FaGithub /> GitHub
-                    </a>
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noreferrer" className={styles.cardLink}>
+                        <FaGithub /> GitHub
+                      </a>
+                    )}
                     <a href={project.live} target="_blank" rel="noreferrer" className={styles.cardLink}>
                       <FaExternalLinkAlt /> Live Demo
                     </a>
