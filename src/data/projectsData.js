@@ -1,84 +1,68 @@
 export const projects = [
   {
     id: 1,
-    title: 'Extramarks Student Learning Dashboard',
-    description:
-      'Production-grade, student-facing React dashboard that surfaces courses, learning paths, and subscription content through modular, data-driven UI layouts.',
-    features: [
-      'Designed and built responsive dashboard layouts using React and Ant Design with reusable, theme-consistent components',
-      'Integrated REST APIs to render course, module, and subscription data with robust loading, empty, and error states',
-      'Implemented Redux Toolkit slices to manage course lists, filters, user progress, and subscription state across views',
-      'Improved perceived performance with memoized components, route-based code splitting, and efficient API data caching',
-    ],
-    tech: ['React', 'Ant Design', 'Redux Toolkit', 'REST APIs', 'CSS Modules'],
-    github: '',
-    live: 'https://www.extramarks.com/',
-    image: null,
-  },
-  {
-    id: 2,
-    title: 'Extramarks Teacher Assessment & Question Bank System',
-    description:
-      'Teacher-facing React dashboards for managing assessments and question banks, optimized for dense data tables and complex filter workflows.',
-    features: [
-      'Built reusable table, filter, and form components with Ant Design to support multiple assessment and reporting screens',
-      'Connected REST APIs to fetch assessment sets, question banks, and results with debounced filters and paginated views',
-      'Managed asynchronous UI state with Redux Toolkit for search, filters, forms, and bulk actions across teacher modules',
-      'Optimized UX for large datasets with virtualized lists, sticky headers, and responsive layouts for desktop-first workflows',
-    ],
-    tech: ['React', 'Ant Design', 'Redux Toolkit', 'REST APIs', 'CSS Modules'],
-    github: '',
-    live: 'https://www.extramarks.com/',
-    image: null,
-  },
-  {
-    id: 3,
     title: 'Config-Driven UI Builder Platform',
     description:
-      'Config-driven React application that dynamically generates complete user interfaces from JSON schemas — zero hardcoded UI.',
+      'A dynamic UI rendering engine that generates complete user interfaces from JSON configuration schemas — zero hardcoded UI. Demonstrates schema-driven architecture principles used in enterprise low-code platforms.',
     features: [
-      'Recursive rendering engine for deeply nested, schema-driven layouts',
-      'Component registry pattern for extensible type-to-component mapping',
-      'Conditional rendering engine with showIf / hideIf and AND/OR logic',
-      'Validation engine, theming, and modular state management with Context API',
+      'Built recursive rendering engine for deeply nested, schema-driven layouts supporting 10+ component types',
+      'Designed component registry pattern with extensible type-to-component mapping — architectural decision typically made at senior-engineer level',
+      'Implemented conditional rendering engine with showIf/hideIf and AND/OR logic, nested layout support',
+      'Built runtime validation engine, light/dark theme switching, and modular state management with Context API — fully extensible without code changes',
     ],
     tech: ['React', 'JavaScript (ES6+)', 'Context API', 'CSS Modules', 'Vite'],
     github: 'https://github.com/webcodeshubham/config-driven-ui-builder',
     live: 'https://config-driven-ui-builder.vercel.app/',
     image: null,
   },
+  {
+    id: 2,
+    title: 'Extramarks Production Dashboards — Student & Teacher Platforms',
+    description:
+      'Two interconnected production platforms — a student learning dashboard serving 1 Lac+ students and a teacher assessment platform used by 60,000+ educators for question bank management and assessment creation.',
+    features: [
+      'Engineered 100+ reusable UI components and replaced heavy Ant Design components with custom-built UI components, reducing bundle chunk size and improving page load time by 30%',
+      'Integrated 100+ REST APIs handling complex asynchronous data flows, loading states, error boundaries, and dynamic rendering across 6+ dashboard modules',
+      'Implemented async state management with Redux Toolkit for course lists, subscription status, student progress, and assessment results — ensuring consistent data flow across platforms',
+      'Optimized rendering performance using component memoization, lazy loading, and efficient state update patterns ensuring smooth UX across large course catalogs and complex assessment screens',
+    ],
+    tech: ['React', 'Ant Design → Custom UI', 'Redux Toolkit', 'REST APIs', 'CSS Modules'],
+    github: '',
+    live: 'https://www.extramarks.com/',
+    image: null,
+  },
 ];
 
 export const timelineData = [
   {
-    year: '2022',
-    role: 'Frontend Web Developer',
-    company: 'Tech IS India',
+    year: '2022 — 2023',
+    role: 'Web Developer',
+    company: 'Tech IS India Pvt. Ltd., Bangalore',
     points: [
-      'Built responsive marketing and product pages using HTML5, CSS3, JavaScript, and React with a focus on clean component structure',
-      'Converted UI/UX designs into pixel-perfect, cross-browser compatible layouts and reusable UI components',
-      'Implemented basic API-driven views to render dynamic content and handle user interactions and forms',
+      'Delivered responsive, pixel-accurate UI across 10+ client projects using HTML, CSS, JavaScript, and React — translating Figma mockups into production-ready components',
+      'Integrated REST APIs and implemented dynamic data rendering for interactive web applications, handling authentication flows and real-time data updates',
+      'Maintained cross-browser compatibility and code quality standards within a 50+ member team, consistently delivering UI modules on schedule',
       'Collaborated with designers and backend developers to align UI behavior, interaction patterns, and delivery timelines',
     ],
   },
   {
     year: '2023 — Present',
-    role: 'Frontend Engineer',
-    company: 'ExtraMarks Education',
+    role: 'Software Developer',
+    company: 'ExtraMarks Education India Pvt. Ltd., Noida',
     points: [
-      'Engineered production-ready React and Ant Design interfaces for student and teacher dashboards used at scale',
-      'Owned end-to-end UI flows from wireframes to deployed features, including state management, API integration, and edge-case handling',
-      'Implemented Redux Toolkit for complex state and async data handling across course, assessment, and reporting modules',
-      'Worked closely with product and backend teams to ship incremental frontend features, improve performance, and refine UX',
+      'Engineered 100+ reusable UI components using React, reducing new module development time by ~30% across product modules used by 50,000+ students, teachers, and parents',
+      'Replaced heavy Ant Design components with custom-built UI components, reducing bundle chunk size and improving page load time by 30% across high-traffic EdTech dashboards',
+      'Integrated 100+ REST APIs handling complex asynchronous data flows, loading states, error boundaries, and dynamic rendering across student and teacher dashboards',
+      'Collaborated within a 200+ member technology department, shipping production-ready features across sprints while leveraging AI-assisted tools (Cursor AI) to accelerate development',
     ],
   },
   {
     year: 'Mentorship',
-    role: 'Frontend / MERN Mentor',
-    company: 'Community & Freelance',
+    role: 'Instructor & Freelance Frontend Developer',
+    company: 'Newton School, Cuvette & Independent Clients (Remote)',
     points: [
-      'Mentored students on how to structure React applications, break down UIs into reusable components, and manage state effectively',
-      'Reviewed frontend code, helped debug complex rendering and state issues, and guided improvements in code quality',
+      'Mentored 500+ students in MERN stack development at Newton School and Cuvette — guiding project implementation, code reviews, and debugging practices',
+      'Delivered responsive UI solutions for 5+ independent clients as a freelance frontend developer — managing end-to-end delivery from requirements to deployment',
       'Introduced mentees to modern tooling (Vite, Git, Postman) and best practices for building portfolio-ready frontend projects',
     ],
   },
@@ -95,7 +79,7 @@ export const skills = {
   'Performance & Architecture': [
     { name: 'Component Architecture', level: 93 },
     { name: 'Performance Optimization', level: 88 },
-    { name: 'State Management', level: 90 },
+    { name: 'State Management (Redux Toolkit)', level: 90 },
     { name: 'REST API Integration', level: 92 },
     { name: 'System Design Thinking', level: 80 },
   ],
@@ -112,5 +96,5 @@ export const socialLinks = {
   github: 'https://github.com/webcodeshubham',
   linkedin: 'https://www.linkedin.com/in/shubhams-2021',
   email: 'theshubhamshri@gmail.com',
-  resume: 'https://drive.google.com/file/d/1WbJZKMzuzorQRWPYq8nB9LohgcWEvzYv/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1dxJ40haVdUA41l4_S8gs52VYUMGjyH38/view?usp=sharing',
 };
