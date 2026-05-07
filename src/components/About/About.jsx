@@ -86,7 +86,7 @@ export default function About() {
                 className={styles.statCard}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className={styles.statNumber}>3+</div>
+                <div className={styles.statNumber}>4+</div>
                 <div className={styles.statLabel}>Years Exp</div>
               </motion.div>
               <motion.div
