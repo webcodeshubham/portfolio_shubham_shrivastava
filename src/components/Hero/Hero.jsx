@@ -1,10 +1,16 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInLeft, fadeInUp, floatingAnimation, glowPulse, staggerContainer } from '../../animations/animationVariants';
-import { socialLinks } from '../../data/projectsData';
-import styles from './Hero.module.css';
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import {
+  fadeInLeft,
+  fadeInUp,
+  floatingAnimation,
+  glowPulse,
+  staggerContainer,
+} from "../../animations/animationVariants";
+import { socialLinks } from "../../data/projectsData";
+import styles from "./Hero.module.css";
 
-const profileImg = '/profile.jpg';
+const profileImg = "/profile.jpg";
 
 export default function Hero() {
   const [showScroll, setShowScroll] = useState(true);
@@ -13,14 +19,14 @@ export default function Hero() {
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
     const onScroll = () => setShowScroll(window.scrollY < 80);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -32,12 +38,15 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div className={styles.imageWrapper} animate={floatingAnimation}>
+          <motion.div
+            className={styles.imageWrapper}
+            animate={floatingAnimation}
+          >
             <div className={styles.imageGlow} />
             <motion.div
               className={styles.imageRingOuter}
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             />
             <motion.div className={styles.imageRing} animate={glowPulse} />
             <img
@@ -55,25 +64,38 @@ export default function Hero() {
           animate="visible"
         >
           <motion.h1 className={styles.name} variants={fadeInUp}>
-            Shubham<br />
+            Shubham
+            <br />
             <span className={styles.nameHighlight}>Shrivastava</span>
           </motion.h1>
 
           <motion.div className={styles.roles} variants={fadeInUp}>
-            <span className={`${styles.roleBadge} ${styles.rolePrimary}`}>Frontend Engineer</span>
-            <span className={`${styles.roleBadge} ${styles.roleSecondary}`}>React Developer</span>
+            <span className={`${styles.roleBadge} ${styles.rolePrimary}`}>
+              Frontend Engineer
+            </span>
+            <span className={`${styles.roleBadge} ${styles.roleSecondary}`}>
+              React Developer
+            </span>
           </motion.div>
 
           <motion.p className={styles.statement} variants={fadeInUp}>
-            I design <span className={styles.statementHighlight}>scalable UI systems</span> and
-            performance-focused frontend architectures with{' '}
-            <span className={styles.statementHighlight}>3+ years</span> of engineering excellence.
+            I design{" "}
+            <span className={styles.statementHighlight}>
+              scalable UI systems
+            </span>{" "}
+            and performance-focused frontend architectures with{" "}
+            <span className={styles.statementHighlight}>4+ years</span> of
+            engineering excellence.
           </motion.p>
 
           <motion.div className={styles.buttons} variants={fadeInUp}>
             <button
               className={styles.btnPrimary}
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View Projects
             </button>
@@ -83,9 +105,9 @@ export default function Hero() {
               className={styles.btnSecondary}
               onClick={(e) => {
                 e.preventDefault();
-                const driveWin = window.open(socialLinks.resume, '_blank');
+                const driveWin = window.open(socialLinks.resume, "_blank");
                 if (!driveWin || driveWin.closed) {
-                  window.location.href = '/resume.pdf';
+                  window.location.href = "/resume.pdf";
                 }
               }}
             >
@@ -93,7 +115,11 @@ export default function Hero() {
             </a>
             <button
               className={styles.btnOutline}
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Contact Me
             </button>
@@ -109,20 +135,53 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             {isMobile ? (
               <motion.div
                 className={styles.mobileScrollHint}
                 animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 1.6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <div className={styles.swipeIcon}>
-                  <svg width="20" height="28" viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="1" y="1" width="18" height="26" rx="9" stroke="currentColor" strokeWidth="1.5" />
+                  <svg
+                    width="20"
+                    height="28"
+                    viewBox="0 0 20 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="1"
+                      y="1"
+                      width="18"
+                      height="26"
+                      rx="9"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    />
                     <circle cx="10" cy="9" r="2" fill="currentColor" />
-                    <path d="M10 16 L10 22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    <path d="M7 19 L10 22 L13 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                      d="M10 16 L10 22"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d="M7 19 L10 22 L13 19"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <span className={styles.swipeText}>Scroll</span>
@@ -131,13 +190,21 @@ export default function Hero() {
               <motion.div
                 className={styles.mouse}
                 animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <div className={styles.mouseBody}>
                   <motion.div
                     className={styles.mouseWheel}
                     animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   />
                 </div>
               </motion.div>
