@@ -103,5 +103,5 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/shubhams-2021",
   email: "theshubhamshri@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1QXyVvqK1btlKqLoCUwBSoRWBMFf3XhVh/view?usp=sharing",
+    "https://drive.google.com/file/d/1YgpqGHhu7Xz54TFrMGgGltiTlZo_wZTx/view?usp=sharing",
 };
